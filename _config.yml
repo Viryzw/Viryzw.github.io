@@ -64,7 +64,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : "https://www.instagram.com/yangwayne831/"
+  instagram        : "yangwayne831"
   lastfm           : # Username
   linkedin         : # Username
   mastodon         : # URL
@@ -80,7 +80,7 @@ author:
   wikipedia        : # Username
   xing             : # Username
   youtube          : # Username
-  zhihu            : "https://www.zhihu.com/people/nian-bai-79-32"
+  zhihu            : "nian-bai-79-32"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
