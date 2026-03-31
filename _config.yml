@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Zhengwei Yang"
   pronouns         : # "he/him"  
   bio              : "Still waters run deep."
@@ -64,7 +64,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : "yangwayne831"
+  instagram        : # "yangwayne831"
   lastfm           : # Username
   linkedin         : # Username
   mastodon         : # URL
