@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Zhengwei Yang"
-  pronouns         : "he/him"  
+  pronouns         : # "he/him"  
   bio              : "Still waters run deep."
   location         : "Shannxi, China"
   employer         : "Northwestern Polytechnical University"
