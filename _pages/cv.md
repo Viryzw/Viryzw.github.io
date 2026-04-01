@@ -29,6 +29,7 @@ Projects
 ---
 
 - **Human-to-Robot Handovers | ICRA 2026 RGMC Competition**, Jan 2026 – Feb 2026
+  
   - Successfully reproduced the StereoHO SOTA method on an AIRBOT Play 6-DoF robotic arm with a G2 two-finger gripper, enabling autonomous cup handover in open environments
   - Personal Contribution: Built and optimized the hardware-software pipeline; integrated and adapted open-source frameworks such as MediaPipe Hands and Visual Hull; performed policy fine-tuning based on $\pi_{0.5}$
 
@@ -41,7 +42,7 @@ Projects
 
 ---
 
-- **NPUcore-BLOSSOM OS Kernel Development (Contributor, Rank #2)**, Mar 2025 – Aug 2025
+- **NPUcore-BLOSSOM (Contributor, Rank #2)**, Mar 2025 – Aug 2025
 
   - Integrated ext4/FAT32 file systems and implemented a VFS abstraction layer; built HAL supporting both RISC-V and LoongArch architectures on virtual machines and development boards
   - Implemented system calls such as sys_clock_nanosleep and sys_copy_file_range; developed core functionalities of tools including Git, Vim, GCC, and Rustc
@@ -49,7 +50,7 @@ Projects
 
 ---
 
-- **VTOL Fixed-Wing UAV for Maritime Autonomous Search and Rescue (Contributor, Rank #3)**, Jul 2024 – Dec 2024
+- **VTOL for Maritime Autonomous Search and Rescue (Contributor, Rank #3)**, Jul 2024 – Dec 2024
 
   - Designed intelligent algorithms for fully autonomous VTOL operations, including takeoff, obstacle avoidance, visual perception, dynamic target tracking, and autonomous landing
   - Personal Contribution: Designed camera projection model to decouple UAV pose from image coordinates; implemented robust visual servoing with multi-feature fusion, achieving a task success rate of 93.49%
@@ -61,6 +62,7 @@ Projects
 
 Honors 
 ---
+
 - National Scholarship, Dec 2025
 - Special Scholarship for Scientific Research and Innovation, NWPU, Dec 2025
 - First-class Scholarship, NWPU, Dec 2025
@@ -68,11 +70,13 @@ Honors
 
 Social Experience
 ---
+
 - Served as a competition assistant, ensuring the smooth execution of all stages including submission, blind review, and presentations
 
 
 Skills
 ---
+
 * Language: C/C++、Python、Java、SQL、Rust
 * Familiar with the Linux development environment and mainstream tools including Git, Docker, Makefile, and CMake
 * Skilled in full-stack UAV development environments, specifically the PX4/Gazebo/ROS ecosystem and the ArduPilot (APM) suite
