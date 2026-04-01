@@ -1,14 +1,11 @@
 ---
 permalink: /
-title: "Homepage"
+title: "👋 About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-👋 About me
--------
 
 🎉 Welcome to Wayne Yang's Homepage!
 
@@ -21,7 +18,7 @@ redirect_from:
 🤙 Feel free to contact me at yangwayne831[at]gmail.com to discuss anything.
 
 📰 News
-----
+=====
 - 🤵 2026.03: I was selected to attend the [13th Oxford China Forum](https://mp.weixin.qq.com/s/wW6LyKkm35TEGHAqVGmcvw).
 - 📝 2026.02: Our paper scored 421 -> 441 (333) at CVPR 2026, although it was ultimately rejected.
 - ✏️ 2026.02: My first [invitation patent](prizes/专利申请受理通知书_2026101479938.pdf) was filed.
