@@ -13,12 +13,12 @@ redirect_from:
 
 ⏪ Looking back, My previous experiences have been largely engineering-driven, with a focus on real-world deployment. Following this principle, I have worked on several projects related to UAV systems and computer vision under the supervision of [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012) and Dr. Yuqing Yang.
 
-⏩ Looking ahead, I aim to build upon this solid engineering foundation to explore research directions related to EAI, including VLA models, MLLMs, and spatial intelligence, as well as inference acceleration through hardware–software co-design.
+⏩ Looking ahead, I aim to build upon this solid engineering foundation to explore research directions related to EAI, including VLA models, MLLMs, and Spatial Intelligence, as well as inference acceleration through hardware–software co-design.
 
 🤙 Feel free to contact me at yangwayne831[at]gmail.com to discuss anything.
 
 📰 News
-=====
+-----
 - 🤵 2026.03: I was selected to attend the [13th Oxford China Forum](https://mp.weixin.qq.com/s/wW6LyKkm35TEGHAqVGmcvw).
 - 📝 2026.02: Our paper scored 421 -> 441 (333) at CVPR 2026, although it was ultimately rejected.
 - ✏️ 2026.02: My first [invitation patent](prizes/专利申请受理通知书_2026101479938.pdf) was filed.
