@@ -27,6 +27,7 @@ Research Experience
 
 Projects
 ---
+
 - **Human-to-Robot Handovers | ICRA 2026 RGMC Competition**, Jan 2026 – Feb 2026
   - Successfully reproduced the StereoHO SOTA method on an AIRBOT Play 6-DoF robotic arm with a G2 two-finger gripper, enabling autonomous cup handover in open environments
   - Personal Contribution: Built and optimized the hardware-software pipeline; integrated and adapted open-source frameworks such as MediaPipe Hands and Visual Hull; performed policy fine-tuning based on $\pi_{0.5}$
