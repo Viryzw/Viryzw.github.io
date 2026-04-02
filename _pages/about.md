@@ -21,7 +21,7 @@ redirect_from:
 -----
 - 🤵 2026.03: I was selected to attend the [13th Oxford China Forum](https://mp.weixin.qq.com/s/wW6LyKkm35TEGHAqVGmcvw).
 - 📝 2026.02: Our paper scored 421 -> 441 (333) at CVPR 2026, although it was ultimately rejected.
-- ✏️ 2026.02: My first [invention patent](prizes/专利申请受理通知书_2026101479938.pdf) was accepted.
+- ✏️ 2026.02: My first [invention patent](prizes/专利申请受理通知书_2026101479938.pdf) was filed.
 - 🤖️ 2026.01-02: I Participated in the Winter Camp hosted by the [Institute for AI Industry Research (AIR), Tsinghua University](https://air.tsinghua.edu.cn/).
 - ✈️ 2026.01: Team GUONAN Won 🥉 in the [3rd “Zhihang Cup” National UAV Intelligent Algorithm Competition](https://news.qq.com/rain/a/20260204A01MVJ00).
 - 🏆 2025.12: I was Awarded the [National Scholarship](prizes/National-Scholarship.png) for the first time.

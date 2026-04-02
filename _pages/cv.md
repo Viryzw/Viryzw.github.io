@@ -16,10 +16,10 @@ Education
 Research Experience
 ---
 * Sept 2025 - Present: Research intern, Northwestern Polytechnical University
-  * **Paper: Learning to See by Looking Away: Occlusion-Robust Visual Recognition via Reasoning under Partial Observations** (CVPR 2026, score: 441 (333), to appear on arXiv)
+  * **Paper: Learning to See by Looking Away: Occlusion-Robust Visual Recognition via Reasoning under Partial Observations** (CVPR 2026 rejected, score: 441 (333); To appear on arXiv)
   * Supervisor: Dr. Yuqing Yang
 * Nov 2023 - Present: Research intern, Northwestern Polytechnical University
-  * **Patent: A Twin-Rotor UAV Control Method Based on Fuzzy Control and Active Disturbance Rejection Control** (Under review)
+  * **Patent: A Twin-Rotor UAV Control Method Based on Fuzzy Control and Active Disturbance Rejection Control** (Filed)
   * Supervisor: [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012)
 
 Projects
