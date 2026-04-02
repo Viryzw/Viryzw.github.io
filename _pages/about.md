@@ -9,7 +9,7 @@ redirect_from:
 
 🎉 Welcome to Wayne Yang's Homepage!
 
-👨‍💻 I'm a third-year undergraduate student at the [School of Software](https://ruanjian.nwpu.edu.cn/), [Northwestern Polytechnical University (NWPU)](https://www.nwpu.edu.cn/), with 3,900+ followers and 780,000+ views on Zhihu under the username "Virgooooo" during high school.
+👨‍💻 I'm a third-year undergraduate student at the [School of Software](https://ruanjian.nwpu.edu.cn/), [Northwestern Polytechnical University (NWPU)](https://www.nwpu.edu.cn/), with 3,900+ followers and 780,000+ views on Zhihu under the username "[Virgooooo](https://www.zhihu.com/people/nian-bai-79-32)" during high school.
 
 ⏪ Looking back, My previous experiences have been largely engineering-driven, with a focus on real-world deployment. Following this principle, I have worked on several projects related to UAV systems and computer vision under the supervision of [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012) and Dr. Yuqing Yang.
 
