@@ -13,7 +13,7 @@ redirect_from:
 
 ⏪ Looking back, My previous experiences have been largely engineering-driven, with a focus on real-world deployment. Following this principle, I have worked on several projects related to UAV systems and computer vision under the supervision of [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012) and Dr. Yuqing Yang.
 
-⏩ Looking ahead, I aim to build upon this solid engineering foundation to explore research directions related to EAI, including VLA models, MLLMs, and Spatial Intelligence, as well as inference acceleration through hardware–software co-design.
+⏩ Looking ahead, I aim to build upon this solid engineering foundation to explore research directions related to EAI, including VLA Models, World Models, MLLMs and Spatial Intelligence, as well as efficient inference through hardware–software co-design.
 
 🤙 Feel free to contact me at yangwayne831[at]gmail.com to discuss anything.
 
