@@ -339,4 +339,4 @@ $$
 
 [vla-scratch](https://github.com/EGalahad/vla-scratch)
 
-[report-slides](https://drive.google.com/file/d/1LbVYTpNtFPOi1eQWuijhcnFVqejfi_bb/view?usp=sharing)
+[report-slides](https://drive.google.com/file/d/1kDcWfvoT33XbEhuWddxAJlgIuRb2clb0/view?usp=share_link)
