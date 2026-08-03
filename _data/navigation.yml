@@ -11,6 +11,8 @@ main:
 
   - title: "Projects"
     url: /projects/
+  - title: "Slides"
+    url: /slides/
   # - title: "Publications"
   #   url: /publications/
 

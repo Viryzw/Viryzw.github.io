@@ -1,0 +1,124 @@
+---
+layout: archive
+title: "Slides"
+permalink: /slides/
+author_profile: true
+---
+
+{% assign slides_count = 0 %}
+{% assign first_slide_url = "" %}
+{% assign first_slide_title = "" %}
+{% assign sorted_files = site.static_files | sort: "name" %}
+
+{% for slide in sorted_files %}
+  {% assign slide_name = slide.name | downcase %}
+  {% assign slide_extension = slide.extname | downcase %}
+  {% if slide.path contains '/files/' and slide_name contains 'slide' and slide_extension == '.pdf' %}
+    {% assign slides_count = slides_count | plus: 1 %}
+    {% if first_slide_url == "" %}
+      {% assign first_slide_url = slide.path | relative_url %}
+      {% assign first_slide_title = slide.name | remove: slide.extname | replace: '_', ' ' | replace: '-', ' ' | replace: 'slides', 'Slides ' | strip %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<div class="slides-library">
+  <header class="slides-library__intro">
+    <p class="slides-library__eyebrow">Presentation archive</p>
+    <p class="slides-library__description">
+      Browse talks, lectures, and project presentations. Select a slide deck to read it here, or open the PDF in a new tab.
+    </p>
+    <p class="slides-library__count">
+      <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+      {{ slides_count }} {% if slides_count == 1 %}presentation{% else %}presentations{% endif %}
+    </p>
+  </header>
+
+  {% if slides_count > 0 %}
+    <div class="slides-library__content">
+      <nav class="slides-list" aria-label="Slide decks">
+        {% assign slide_index = 0 %}
+        {% for slide in sorted_files %}
+          {% assign slide_name = slide.name | downcase %}
+          {% assign slide_extension = slide.extname | downcase %}
+          {% if slide.path contains '/files/' and slide_name contains 'slide' and slide_extension == '.pdf' %}
+            {% assign slide_index = slide_index | plus: 1 %}
+            {% assign slide_url = slide.path | relative_url %}
+            {% assign slide_title = slide.name | remove: slide.extname | replace: '_', ' ' | replace: '-', ' ' | replace: 'slides', 'Slides ' | strip %}
+            <a
+              class="slides-list__item{% if slide_index == 1 %} is-active{% endif %}"
+              href="{{ slide_url }}"
+              target="slides-pdf-viewer"
+              data-slide-title="{{ slide_title | escape }}"
+              aria-current="{% if slide_index == 1 %}true{% else %}false{% endif %}"
+            >
+              <span class="slides-list__icon" aria-hidden="true"><i class="fa-solid fa-file-pdf"></i></span>
+              <span class="slides-list__text">
+                <span class="slides-list__title">{{ slide_title }}</span>
+                <span class="slides-list__meta">PDF presentation</span>
+              </span>
+              <i class="fa-solid fa-chevron-right slides-list__arrow" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+      <section class="slides-viewer" aria-labelledby="slides-viewer-title">
+        <div class="slides-viewer__toolbar">
+          <div>
+            <span class="slides-viewer__label">Now viewing</span>
+            <h2 id="slides-viewer-title">{{ first_slide_title }}</h2>
+          </div>
+          <a class="slides-viewer__open" href="{{ first_slide_url }}" target="_blank" rel="noopener">
+            <span>Open PDF</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+        <iframe
+          class="slides-viewer__frame"
+          name="slides-pdf-viewer"
+          src="{{ first_slide_url }}"
+          title="{{ first_slide_title | escape }} PDF viewer"
+          loading="lazy"
+        ></iframe>
+        <p class="slides-viewer__fallback">
+          If the PDF does not appear, <a href="{{ first_slide_url }}" target="_blank" rel="noopener">open it in a new tab</a>.
+        </p>
+      </section>
+    </div>
+  {% else %}
+    <div class="slides-library__empty">
+      <i class="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
+      <h2>No slides yet</h2>
+      <p>Add a PDF with “slide” in its filename to the <code>files</code> folder and it will appear here automatically.</p>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  (function () {
+    var slideLinks = document.querySelectorAll('.slides-list__item');
+    var viewerTitle = document.getElementById('slides-viewer-title');
+    var viewerFrame = document.querySelector('.slides-viewer__frame');
+    var openLink = document.querySelector('.slides-viewer__open');
+    var fallbackLink = document.querySelector('.slides-viewer__fallback a');
+
+    slideLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        slideLinks.forEach(function (item) {
+          item.classList.remove('is-active');
+          item.setAttribute('aria-current', 'false');
+        });
+
+        link.classList.add('is-active');
+        link.setAttribute('aria-current', 'true');
+
+        var title = link.getAttribute('data-slide-title');
+        var url = link.getAttribute('href');
+        viewerTitle.textContent = title;
+        viewerFrame.setAttribute('title', title + ' PDF viewer');
+        openLink.setAttribute('href', url);
+        fallbackLink.setAttribute('href', url);
+      });
+    });
+  }());
+</script>
