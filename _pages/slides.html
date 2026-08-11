@@ -5,22 +5,31 @@ permalink: /slides/
 author_profile: true
 ---
 
-{% assign slides_count = 0 %}
-{% assign first_slide_url = "" %}
-{% assign first_slide_title = "" %}
-{% assign sorted_files = site.static_files | sort: "name" %}
-
-{% for slide in sorted_files %}
-  {% assign slide_name = slide.name | downcase %}
-  {% assign slide_extension = slide.extname | downcase %}
-  {% if slide.path contains '/files/' and slide_name contains 'slide' and slide_extension == '.pdf' %}
-    {% assign slides_count = slides_count | plus: 1 %}
-    {% if first_slide_url == "" %}
-      {% assign first_slide_url = slide.path | relative_url %}
-      {% assign first_slide_title = slide.name | remove: slide.extname | replace: '_', ' ' | replace: '-', ' ' | replace: 'slides', 'Slides ' | strip %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{%- capture slide_records -%}
+  {%- for slide in site.static_files -%}
+    {%- assign slide_name = slide.name | downcase -%}
+    {%- assign slide_prefix = slide_name | slice: 0, 7 -%}
+    {%- assign slide_extension = slide.extname | downcase -%}
+    {%- if slide.path contains '/files/' and slide_prefix == 'slides-' and slide_extension == '.pdf' -%}
+      {%- assign slide_stem = slide.name | remove: slide.extname -%}
+      {%- assign slide_parts = slide_stem | split: '-' -%}
+      {%- assign topic_part_count = slide_parts.size | minus: 4 -%}
+      {%- assign slide_title = slide_parts | slice: 1, topic_part_count | join: '-' -%}
+      {%- assign slide_date_parts = slide_parts | slice: -3, 3 -%}
+      {%- assign slide_date = slide_date_parts | join: '-' -%}
+      {{- slide_date -}}|||{{- slide_title -}}|||{{- slide.path -}};;;
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign sorted_slide_records = slide_records | split: ';;;' | sort -%}
+{%- assign slides_count = sorted_slide_records | size -%}
+{%- assign first_slide_title = '' -%}
+{%- assign first_slide_url = '' -%}
+{%- if slides_count > 0 -%}
+  {%- assign first_slide = sorted_slide_records | first | split: '|||' -%}
+  {%- assign first_slide_title = first_slide[1] -%}
+  {%- assign first_slide_url = first_slide[2] | relative_url -%}
+{%- endif -%}
 
 <div class="slides-library">
   <header class="slides-library__intro">
@@ -37,29 +46,19 @@ author_profile: true
   {% if slides_count > 0 %}
     <div class="slides-library__content">
       <nav class="slides-list" aria-label="Slide decks">
-        {% assign slide_index = 0 %}
-        {% for slide in sorted_files %}
-          {% assign slide_name = slide.name | downcase %}
-          {% assign slide_extension = slide.extname | downcase %}
-          {% if slide.path contains '/files/' and slide_name contains 'slide' and slide_extension == '.pdf' %}
-            {% assign slide_index = slide_index | plus: 1 %}
-            {% assign slide_url = slide.path | relative_url %}
-            {% assign slide_title = slide.name | remove: slide.extname | replace: '_', ' ' | replace: '-', ' ' | replace: 'slides', 'Slides ' | strip %}
-            <a
-              class="slides-list__item{% if slide_index == 1 %} is-active{% endif %}"
-              href="{{ slide_url }}"
-              target="slides-pdf-viewer"
-              data-slide-title="{{ slide_title | escape }}"
-              aria-current="{% if slide_index == 1 %}true{% else %}false{% endif %}"
-            >
-              <span class="slides-list__icon" aria-hidden="true"><i class="fa-solid fa-file-pdf"></i></span>
-              <span class="slides-list__text">
-                <span class="slides-list__title">{{ slide_title }}</span>
-                <span class="slides-list__meta">PDF presentation</span>
-              </span>
-              <i class="fa-solid fa-chevron-right slides-list__arrow" aria-hidden="true"></i>
-            </a>
-          {% endif %}
+        {% for slide_record in sorted_slide_records %}
+          {% assign slide = slide_record | split: '|||' %}
+          {% assign slide_title = slide[1] %}
+          {% assign slide_url = slide[2] | relative_url %}
+          <a
+            class="slides-list__item{% if forloop.first %} is-active{% endif %}"
+            href="{{ slide_url }}"
+            target="slides-pdf-viewer"
+            data-slide-title="{{ slide_title | escape }}"
+            aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            <span class="slides-list__title">{{ slide_title }}</span>
+          </a>
         {% endfor %}
       </nav>
 
@@ -89,36 +88,43 @@ author_profile: true
     <div class="slides-library__empty">
       <i class="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
       <h2>No slides yet</h2>
-      <p>Add a PDF with “slide” in its filename to the <code>files</code> folder and it will appear here automatically.</p>
+      <p>Add a PDF named <code>slides-topic-YYYY-MM-DD.pdf</code> to the <code>files</code> folder and it will appear here automatically.</p>
     </div>
   {% endif %}
 </div>
 
 <script>
   (function () {
-    var slideLinks = document.querySelectorAll('.slides-list__item');
+    var slideLinks = Array.prototype.slice.call(document.querySelectorAll('.slides-list__item'));
     var viewerTitle = document.getElementById('slides-viewer-title');
     var viewerFrame = document.querySelector('.slides-viewer__frame');
     var openLink = document.querySelector('.slides-viewer__open');
     var fallbackLink = document.querySelector('.slides-viewer__fallback a');
 
+    function showSlide(link) {
+      slideLinks.forEach(function (item) {
+        item.classList.remove('is-active');
+        item.setAttribute('aria-current', 'false');
+      });
+
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'true');
+
+      var title = link.getAttribute('data-slide-title');
+      var url = link.getAttribute('href');
+      viewerTitle.textContent = title;
+      viewerFrame.setAttribute('src', url);
+      viewerFrame.setAttribute('title', title + ' PDF viewer');
+      openLink.setAttribute('href', url);
+      fallbackLink.setAttribute('href', url);
+    }
+
     slideLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        slideLinks.forEach(function (item) {
-          item.classList.remove('is-active');
-          item.setAttribute('aria-current', 'false');
-        });
-
-        link.classList.add('is-active');
-        link.setAttribute('aria-current', 'true');
-
-        var title = link.getAttribute('data-slide-title');
-        var url = link.getAttribute('href');
-        viewerTitle.textContent = title;
-        viewerFrame.setAttribute('title', title + ' PDF viewer');
-        openLink.setAttribute('href', url);
-        fallbackLink.setAttribute('href', url);
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        showSlide(link);
       });
     });
+
   }());
 </script>
