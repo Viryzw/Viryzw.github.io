@@ -7,14 +7,12 @@ author_profile: true
 
 {%- capture slide_records -%}
   {%- for slide in site.static_files -%}
-    {%- assign slide_name = slide.name | downcase -%}
-    {%- assign slide_prefix = slide_name | slice: 0, 7 -%}
     {%- assign slide_extension = slide.extname | downcase -%}
-    {%- if slide.path contains '/files/' and slide_prefix == 'slides-' and slide_extension == '.pdf' -%}
+    {%- if slide.path contains '/files/slides/' and slide_extension == '.pdf' -%}
       {%- assign slide_stem = slide.name | remove: slide.extname -%}
       {%- assign slide_parts = slide_stem | split: '-' -%}
-      {%- assign topic_part_count = slide_parts.size | minus: 4 -%}
-      {%- assign slide_title = slide_parts | slice: 1, topic_part_count | join: '-' -%}
+      {%- assign topic_part_count = slide_parts.size | minus: 3 -%}
+      {%- assign slide_title = slide_parts | slice: 0, topic_part_count | join: '-' -%}
       {%- assign slide_date_parts = slide_parts | slice: -3, 3 -%}
       {%- assign slide_date = slide_date_parts | join: '-' -%}
       {{- slide_date -}}|||{{- slide_title -}}|||{{- slide.path -}};;;
@@ -88,7 +86,7 @@ author_profile: true
     <div class="slides-library__empty">
       <i class="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
       <h2>No slides yet</h2>
-      <p>Add a PDF named <code>slides-topic-YYYY-MM-DD.pdf</code> to the <code>files</code> folder and it will appear here automatically.</p>
+      <p>Add a PDF named <code>topic-YYYY-MM-DD.pdf</code> to the <code>files/slides</code> folder and it will appear here automatically.</p>
     </div>
   {% endif %}
 </div>
