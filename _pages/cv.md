@@ -12,6 +12,7 @@ redirect_from:
 Education
 ---
 - B.Eng. in Software Engineering, Northwestern Polytechnical University, 2027 (expected)
+- Dr.Eng in Electronic Information, Shanghai AI Laboratory & Xi'an Jiaotong University, 2032 (expected)
 
 Research Experience
 ---

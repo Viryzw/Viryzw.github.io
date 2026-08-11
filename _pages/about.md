@@ -11,6 +11,8 @@ redirect_from:
 
 👨‍💻 I'm a third-year undergraduate student at the [School of Software](https://ruanjian.nwpu.edu.cn/), [Northwestern Polytechnical University (NWPU)](https://www.nwpu.edu.cn/), with 3,900+ followers and 780,000+ views on Zhihu under the username "[Virgooooo](https://www.zhihu.com/people/nian-bai-79-32)" during high school.
 
+🎓 In 2027, I will begin pursuing a Doctor of Engineering degree through a joint doctoral program between the [Shanghai AI Laboratory](https://www.shlab.org.cn) and Xi'an Jiaotong University, under the supervision of [Assoc.Prof. Bin Zhao](https://scholar.google.com/citations?hl=en&user=DQB0hqwAAAAJ).
+
 ⏪ Looking back, My previous experiences have been largely engineering-driven, with a focus on real-world deployment. Following this principle, I have worked on several projects related to UAV systems and computer vision under the supervision of [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012) and Dr. Yuqing Yang.
 
 ⏩ Looking ahead, I aim to build upon this solid engineering foundation to explore research directions related to EAI, including VLA Models, World Models, MLLMs and Spatial Intelligence, as well as efficient inference through hardware–software co-design.
@@ -29,7 +31,6 @@ redirect_from:
 - 💻 2025.08: [NPUcore-BLOSSOM](https://gitlab.eduxiji.net/educg-group-36002-2710490/oskernel2025-npucore-blossom) Won the Second Prize in [2025 CSCC - OS Kernel Implementation Track](https://os.educg.net/?token=bdXIvOx2g4Zr948FwkX3gcnIFxsz2cGTDKUxZQKd3i#/oldDetail?name=2025年全国大学生计算机系统能力大赛-操作系统设计赛%28全国%29-OS内核实现赛道).
 - ✈️ 2024.12: Team GUONAN Participated in the [2nd “Zhihang Cup” National UAV Intelligent Algorithm Competition](https://cloud.tencent.com/developer/article/2481843).
 - ✈️ 2024.11: Team GUONAN Won [Grand Prize](prizes/2024-ChallengeCup-GrandPrize.png) in the 19th Challenge Cup — "Jiebang Guashuai" Competition. 
-
 
 
 
