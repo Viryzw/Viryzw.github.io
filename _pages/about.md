@@ -11,7 +11,7 @@ redirect_from:
 
 👨‍💻 I'm a third-year undergraduate student at the [School of Software](https://ruanjian.nwpu.edu.cn/), [Northwestern Polytechnical University (NWPU)](https://www.nwpu.edu.cn/), with 3,900+ followers and 780,000+ views on Zhihu under the username "[Virgooooo](https://www.zhihu.com/people/nian-bai-79-32)" during high school.
 
-🎓 In 2027, I will begin pursuing a Doctor of Engineering degree through a joint doctoral program between the [Shanghai AI Laboratory](https://www.shlab.org.cn) and [University of Science and Technology of China](https://www.ustc.edu.cn), under the supervision of [Assoc.Prof. Bin Zhao](https://scholar.google.com/citations?hl=en&user=DQB0hqwAAAAJ) and [Prof. Xing Xie](https://scholar.google.com/citations?user=5EQfAFIAAAAJ&hl=en).
+🎓 In 2027, I will begin pursuing Ph.D. through a joint doctoral program between the [Shanghai AI Laboratory](https://www.shlab.org.cn) and [University of Science and Technology of China](https://www.ustc.edu.cn), under the supervision of [Assoc.Prof. Bin Zhao](https://scholar.google.com/citations?hl=en&user=DQB0hqwAAAAJ) and [Prof. Xing Xie](https://scholar.google.com/citations?user=5EQfAFIAAAAJ&hl=en).
 
 ⏪ Looking back, My previous experiences have been largely engineering-driven, with a focus on real-world deployment. Following this principle, I have worked on several projects related to UAV systems and computer vision under the supervision of [Assoc. Prof. Jianlin Chen](https://teacher.nwpu.edu.cn/person/2021050012) and Dr. Yuqing Yang.
 
